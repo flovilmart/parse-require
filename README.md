@@ -1,11 +1,32 @@
-require.js for Parse
+parse-require
 ========
+
+##Installation
+
+#### Recommended
+
+install parse-cli
+
+	npm install -g parse-cli
+	
+from your parse directory's root folder
+
+	parse-cli install flovilmart/parse-require require
+	
+That will install require in
+	`./cloud/parse_modules/require`
+	
+
+#### Other method
+
+Get the index.js file and put it anywhere in your cloud folder (rename it require.js for the sake of understanding)
+
 
 ##How to use
 
 in main.js :
 
-    var require2 = require("cloud/require.js");
+    var require2 = require("cloud/parse_modules/require/index");
     require2("cloud/app");
     // same as
     require2("./app");
@@ -48,7 +69,8 @@ You can still use the original require with
 
 - Caching, loaded modules are cached with their full path
 - JSON files, Adds support for json files
-- parse_modules, adds supoort for parse_modules folder traversing (pmm anyone?)
-- relative paths, improves code reliablitiy and flexibility
+- parse_modules, adds supoort for parse_modules folder traversing
+- Loads index.js in folders by default
+- package.json parsing and loading, if your parse_module has a package.json file, it will load the main.
+- relative paths (./, ../ etc..), improves code reliablitiy and flexibility
 - fast
-
