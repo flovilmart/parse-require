@@ -3,7 +3,13 @@ parse-require
 
 ##Installation
 
-#### Recommended
+#### With parse-module
+
+	npm install -g parse-module // optional if you alread have it
+	parse-module install flovilmart/parse-require require
+	 
+
+#### From parse-cli
 
 install parse-cli
 
