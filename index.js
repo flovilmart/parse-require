@@ -10,6 +10,7 @@ var Module = function(id, parent){
 	this._require = _require;
 	this.filename = undefined;
 	this.__dir = undefined;
+	this.exports = {} // otherwise the exports is undefined ...
 }
 
 
